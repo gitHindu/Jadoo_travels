@@ -483,46 +483,48 @@ function Subscribe() {
 
   return (
     <section aria-label="Subscribe to Jadoo updates" className="relative mx-auto max-w-7xl px-5 pb-[70px] sm:px-8 lg:px-12">
-      <div className="relative mx-auto max-w-[1100px] overflow-hidden rounded-[24px] rounded-tl-[40px] bg-[#f9f7fe] px-5 py-12 sm:rounded-[36px] sm:rounded-tl-[72px] sm:px-10 sm:py-14 lg:px-20">
-        <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -left-20 h-[300px] w-[300px] rounded-full border border-[#e9e4f8] sm:-left-16">
-          <div className="absolute inset-3 rounded-full border border-[#ece8f9]" />
-          <div className="absolute inset-6 rounded-full border border-[#ece8f9]" />
-          <div className="absolute inset-9 rounded-full border border-[#ece8f9]" />
-          <div className="absolute inset-12 rounded-full border border-[#ece8f9]" />
-        </div>
-        <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-20 h-[250px] w-[250px] rounded-full border border-[#e9e4f8]">
-          <div className="absolute inset-3 rounded-full border border-[#ece8f9]" />
-          <div className="absolute inset-6 rounded-full border border-[#ece8f9]" />
-          <div className="absolute inset-9 rounded-full border border-[#ece8f9]" />
-          <div className="absolute inset-12 rounded-full border border-[#ece8f9]" />
+      <div className="relative mx-auto max-w-[1100px]">
+        <div className="relative overflow-hidden rounded-[24px] rounded-tl-[40px] bg-[#f9f7fe] px-5 py-12 sm:rounded-[36px] sm:rounded-tl-[72px] sm:px-10 sm:py-14 lg:px-20">
+          <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -left-20 h-[300px] w-[300px] rounded-full border border-[#e9e4f8] sm:-left-16">
+            <div className="absolute inset-3 rounded-full border border-[#ece8f9]" />
+            <div className="absolute inset-6 rounded-full border border-[#ece8f9]" />
+            <div className="absolute inset-9 rounded-full border border-[#ece8f9]" />
+            <div className="absolute inset-12 rounded-full border border-[#ece8f9]" />
+          </div>
+          <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-20 h-[250px] w-[250px] rounded-full border border-[#e9e4f8]">
+            <div className="absolute inset-3 rounded-full border border-[#ece8f9]" />
+            <div className="absolute inset-6 rounded-full border border-[#ece8f9]" />
+            <div className="absolute inset-9 rounded-full border border-[#ece8f9]" />
+            <div className="absolute inset-12 rounded-full border border-[#ece8f9]" />
+          </div>
+
+          <div className="relative z-10 mx-auto max-w-[720px] text-center">
+            <h2 className="text-base font-semibold leading-7 text-[#5e6282] sm:text-xl sm:leading-8 lg:text-2xl">
+              Subscribe to get information, latest news and other<br className="hidden sm:block" /> interesting offers about Jadoo
+            </h2>
+            <form className="mx-auto mt-8 flex max-w-[480px] flex-col gap-3 sm:flex-row" onSubmit={handleSubmit}>
+              <label className="flex min-h-[48px] flex-1 items-center gap-3 rounded-lg bg-white px-4 text-[#5e6282] shadow-sm">
+                <Mail size={16} strokeWidth={1.7} />
+                <span className="sr-only">Your email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                  className="min-w-0 flex-1 border-0 bg-transparent text-xs text-ink outline-none placeholder:text-[#8a8a9a]"
+                />
+              </label>
+              <button type="submit" className="min-h-[48px] rounded-lg bg-[#ff806d] px-8 text-xs font-medium text-white shadow-sm transition hover:bg-[#f16e5c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral">
+                Subscribe
+              </button>
+            </form>
+            {message && <p role="status" className="mt-3 text-xs text-muted">{message}</p>}
+          </div>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-[720px] text-center">
-          <h2 className="text-base font-semibold leading-7 text-[#5e6282] sm:text-xl sm:leading-8 lg:text-2xl">
-            Subscribe to get information, latest news and other<br className="hidden sm:block" /> interesting offers about Jadoo
-          </h2>
-          <form className="mx-auto mt-8 flex max-w-[480px] flex-col gap-3 sm:flex-row" onSubmit={handleSubmit}>
-            <label className="flex min-h-[48px] flex-1 items-center gap-3 rounded-lg bg-white px-4 text-[#5e6282] shadow-sm">
-              <Mail size={16} strokeWidth={1.7} />
-              <span className="sr-only">Your email</span>
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email"
-                required
-                className="min-w-0 flex-1 border-0 bg-transparent text-xs text-ink outline-none placeholder:text-[#8a8a9a]"
-              />
-            </label>
-            <button type="submit" className="min-h-[48px] rounded-lg bg-[#ff806d] px-8 text-xs font-medium text-white shadow-sm transition hover:bg-[#f16e5c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral">
-              Subscribe
-            </button>
-          </form>
-          {message && <p role="status" className="mt-3 text-xs text-muted">{message}</p>}
+        <div aria-hidden="true" className="pointer-events-none absolute right-0 top-[-12px] z-10 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#7471f5] to-[#554de8] text-white shadow-[0_8px_18px_rgba(100,91,234,.3)] sm:top-[-18px] sm:h-12 sm:w-12 lg:h-[58px] lg:w-[58px]">
+          <Send size={22} fill="currentColor" strokeWidth={1.5} />
         </div>
-      </div>
-
-      <div aria-hidden="true" className="pointer-events-none absolute right-2 top-[-12px] z-10 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#7471f5] to-[#554de8] text-white shadow-[0_8px_18px_rgba(100,91,234,.3)] sm:right-4 sm:top-[-18px] sm:h-12 sm:w-12 lg:right-8 lg:h-[58px] lg:w-[58px]">
-        <Send size={22} fill="currentColor" strokeWidth={1.5} />
       </div>
 
     </section>
