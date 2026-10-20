@@ -218,7 +218,7 @@ function Hero() {
           <img
             src={hero}
             alt="Traveller enjoying a scenic destination"
-            className="hero-traveller relative z-10 max-h-[300px] w-full max-w-[500px] rounded-[42%_42%_22%_22%] object-cover object-center shadow-[0_25px_60px_rgba(24,30,75,.13)] md:max-h-[400px] md:rounded-[48%_48%_28%_28%] md:shadow-none lg:max-h-[480px]"
+            className="hero-traveller relative z-10 max-h-[300px] w-full max-w-[500px] rounded-none object-cover object-center  md:max-h-[400px] md:rounded-[48%_48%_28%_28%] md:shadow-none lg:max-h-[480px]"
           />
         
        
@@ -317,7 +317,7 @@ function Destinations() {
 
 function BookingSteps() {
   return (
-    <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-[70px] pt-4 sm:px-8 md:grid-cols-2 lg:gap-20 lg:px-12">
+    <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-[70px] pt-4 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:px-12">
       <div className="reveal">
         <p className="mb-3 text-xs font-semibold text-muted">Easy and Fast</p>
         <h2 className="max-w-lg font-heading text-[40px] font-bold leading-tight text-ink sm:text-4xl lg:text-[38px]">
@@ -338,7 +338,7 @@ function BookingSteps() {
         </div>
       </div>
 
-      <div className="relative mx-auto w-full max-w-[410px] pb-12 reveal">
+      <div className="relative mx-auto w-full max-w-[410px] pb-4 reveal lg:pb-12">
         <div aria-hidden="true" className="absolute -right-8 -top-10 h-64 w-64 rounded-full bg-[#59b1e6]/15 blur-3xl" />
         <article className="relative z-10 rounded-[28px] bg-white p-4 shadow-[0_25px_60px_rgba(24,30,75,.12)] sm:p-6">
           <img
@@ -366,7 +366,7 @@ function BookingSteps() {
           </div>
         </article>
 
-        <aside className="absolute right-0 top-[63%] z-20 w-[180px] -translate-y-1/2 rounded-2xl bg-white p-3 shadow-[0_18px_40px_rgba(24,30,75,.14)] sm:w-[210px] sm:p-3 lg:-right-10">
+        <aside className="relative right-0 z-20 mt-4 w-full rounded-2xl bg-white p-3 shadow-[0_18px_40px_rgba(24,30,75,.14)] lg:absolute lg:top-[63%] lg:mt-0 lg:w-[210px] lg:-translate-y-1/2 lg:-right-10">
           <div className="flex items-center gap-3">
             <img src={destinations[0].image} alt="" className="h-10 w-10 rounded-full object-cover sm:h-12 sm:w-12" />
             <div>
@@ -483,7 +483,7 @@ function Subscribe() {
 
   return (
     <section aria-label="Subscribe to Jadoo updates" className="relative mx-auto max-w-7xl px-5 pb-[70px] sm:px-8 lg:px-12">
-      <div className="relative mx-auto max-w-[1100px] overflow-hidden rounded-[36px] rounded-tl-[72px] bg-[#f9f7fe] px-5 py-12 sm:px-10 sm:py-14 lg:px-20">
+      <div className="relative mx-auto max-w-[1100px] overflow-hidden rounded-[24px] rounded-tl-[40px] bg-[#f9f7fe] px-5 py-12 sm:rounded-[36px] sm:rounded-tl-[72px] sm:px-10 sm:py-14 lg:px-20">
         <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -left-20 h-[300px] w-[300px] rounded-full border border-[#e9e4f8] sm:-left-16">
           <div className="absolute inset-3 rounded-full border border-[#ece8f9]" />
           <div className="absolute inset-6 rounded-full border border-[#ece8f9]" />
@@ -521,7 +521,7 @@ function Subscribe() {
         </div>
       </div>
 
-      <div aria-hidden="true" className="pointer-events-none absolute right-8 top-0 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#7471f5] to-[#554de8] text-white shadow-[0_8px_18px_rgba(100,91,234,.3)] sm:right-8 sm:top-[-18px] sm:h-[58px] sm:w-[58px]">
+      <div aria-hidden="true" className="pointer-events-none absolute right-2 top-[-12px] z-10 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#7471f5] to-[#554de8] text-white shadow-[0_8px_18px_rgba(100,91,234,.3)] sm:right-4 sm:top-[-18px] sm:h-12 sm:w-12 lg:right-8 lg:h-[58px] lg:w-[58px]">
         <Send size={22} fill="currentColor" strokeWidth={1.5} />
       </div>
 
