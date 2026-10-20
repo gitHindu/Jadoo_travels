@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  color: #212832;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.font-heading { font-family: 'Volkhov', Georgia, serif; }
+.hero-bg { background: linear-gradient(105deg, #fff 0%, #fff 54%, #fffdf8 100%); }
+.dot-pattern {
+  background-image: radial-gradient(#d9d9e3 1px, transparent 1px);
+  background-size: 13px 13px;
+  mask-image: linear-gradient(to bottom left, #000, transparent);
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.plane-float { animation: float-plane 4s ease-in-out infinite; }
+@keyframes float-plane {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-12deg); }
+  50% { transform: translate3d(8px, -9px, 0) rotate(-8deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
